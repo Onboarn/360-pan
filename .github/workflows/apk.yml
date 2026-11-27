@@ -12,7 +12,10 @@ jobs:
         with: { distribution: temurin, java-version: 21 }
       - uses: actions/setup-node@v4
         with: { node-version: 22 }
+      - name: Проверка google-services.json
+        run: test -s android/app/google-services.json || (echo "Нет android/app/google-services.json" && exit 1)
       - run: npm install
+      - run: npm run build
       - run: npx cap sync android
       - run: chmod +x android/gradlew && cd android && ./gradlew assembleDebug
       - uses: actions/upload-artifact@v4
