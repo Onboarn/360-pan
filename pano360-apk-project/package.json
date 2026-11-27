@@ -3,19 +3,23 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
+    "@capacitor-community/media": "^9.1.0",
     "@capacitor-firebase/authentication": "^8.6.0",
     "@capacitor/android": "^8.6.3",
     "@capacitor/browser": "^8.0.5",
     "@capacitor/cli": "^8.6.3",
     "@capacitor/core": "^8.6.3",
     "@capacitor/device": "^8.0.3",
-    "firebase": "^12.19.0",
-    "pannellum": "^2.5.6"
+    "@capacitor/filesystem": "^8.1.5",
+    "@capacitor/share": "^8.0.3",
+    "firebase": "^12.19.0"
   },
   "devDependencies": {
-    "esbuild": "^0.28.2"
+    "esbuild": "^0.28.2",
+    "javascript-obfuscator": "^5.10.1"
   },
   "scripts": {
-    "build": "esbuild src/native.js --bundle --minify --format=iife --outfile=www/native.js --log-level=warning"
-  }
+    "build": "node build.mjs"
+  },
+  "type": "module"
 }

@@ -23,9 +23,17 @@ android {
             keyAlias 'pano360'
             keyPassword 'android'
         }
+        release {
+            storeFile file('pano360.keystore')
+            storePassword 'android'
+            keyAlias 'pano360'
+            keyPassword 'android'
+        }
     }
     buildTypes {
         release {
+            signingConfig signingConfigs.release
+            debuggable false
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }

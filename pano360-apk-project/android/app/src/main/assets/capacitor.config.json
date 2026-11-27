@@ -1,5 +1,18 @@
 {
 	"appId": "com.pano360.app",
 	"appName": "Панорама 360",
-	"webDir": "www"
+	"webDir": "www",
+	"android": {
+		"webContentsDebugEnabled": false,
+		"allowMixedContent": false
+	},
+	"plugins": {
+		"FirebaseAuthentication": {
+			"skipNativeAuth": false,
+			"providers": [
+				"google.com",
+				"apple.com"
+			]
+		}
+	}
 }
