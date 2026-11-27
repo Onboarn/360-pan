@@ -1,0 +1,11 @@
+{
+  "appId": "com.pano360.app",
+  "appName": "Панорама 360",
+  "webDir": "www",
+  "plugins": {
+    "FirebaseAuthentication": {
+      "skipNativeAuth": false,
+      "providers": ["google.com", "apple.com"]
+    }
+  }
+}
